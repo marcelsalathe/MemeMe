@@ -23,11 +23,19 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cI5-oL-5AB">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Album" id="D8l-uh-zC6">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="c1u-VY-se7"/>
+                                    <barButtonItem systemItem="camera" id="D8l-uh-zC6">
                                         <connections>
-                                            <action selector="pickImage:" destination="vXZ-lx-hvc" id="Vn5-kc-SQs"/>
+                                            <action selector="pickImageFromCamera:" destination="vXZ-lx-hvc" id="4gf-cT-Zil"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="70" style="plain" systemItem="fixedSpace" id="gi2-qf-mp3"/>
+                                    <barButtonItem title="Album" id="hQm-kC-Kfl">
+                                        <connections>
+                                            <action selector="pickImageFromAlbum:" destination="vXZ-lx-hvc" id="t2K-CF-ner"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RAe-6h-D0r"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -43,6 +51,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="D8l-uh-zC6" id="Wu1-6x-OCF"/>
                         <outlet property="pickedImageView" destination="K0p-Hq-ChN" id="Y40-nv-anw"/>
                     </connections>
                 </viewController>
