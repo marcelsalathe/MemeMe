@@ -41,7 +41,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.text = "BOTTOM"
         bottomTextField.textAlignment = NSTextAlignment.Center;
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,11 +54,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.subscribeToKeyboardNotifications()
     }
     
-    // Unsubscribe
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        // Unsubscribe
         self.unsubscribeFromKeyboardNotifications()
     }
+    
+    
+    
+    
+    ///////////////////////////////////////////////////
+    // SOME FUNCTIONS TO DEAL WITH VIEW MOVING
+    ///////////////////////////////////////////////////
     
     func subscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -84,6 +92,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.CGRectValue().height
     }
     
+    
+    
+    
+    ///////////////////////////////////////////////////
+    // IMAGE PICKER FUNCTIONS
+    ///////////////////////////////////////////////////
+    
     @IBAction func pickImageFromCamera(sender: UIBarButtonItem) {
         pickImage(UIImagePickerControllerSourceType.Camera)
     }
@@ -99,7 +114,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.pickedImageView.image = image
@@ -107,12 +121,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
+    
+    
+    ///////////////////////////////////////////////////
+    // TEXT FIELD DELEGATE FUNCTIONS
+    ///////////////////////////////////////////////////
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -121,6 +139,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func textFieldDidBeginEditing(textField: UITextField) {
         textField.text = ""
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        var newText: NSString = textField.text
+        newText = newText.stringByReplacingCharactersInRange(range, withString: string.uppercaseString)
+        textField.text = String(newText)
+        return false
     }
     
     

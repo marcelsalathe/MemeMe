@@ -38,12 +38,15 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="RAe-6h-D0r"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is the bottom label" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imE-je-ECo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is the bottom label" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imE-je-ECo">
                                 <rect key="frame" x="10" y="471" width="581" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="581" id="cog-BB-Wak"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is the top label" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVM-xY-YVU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is the top label" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVM-xY-YVU">
                                 <rect key="frame" x="10" y="47" width="581" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -53,9 +56,13 @@
                         <constraints>
                             <constraint firstItem="RVM-xY-YVU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="0MM-KI-0ge"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RVM-xY-YVU" secondAttribute="trailing" constant="-16" id="0oy-Ie-RV0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="imE-je-ECo" secondAttribute="trailing" constant="-16" id="18a-xB-7d3"/>
+                            <constraint firstItem="RVM-xY-YVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="1fm-5s-DaE"/>
+                            <constraint firstItem="imE-je-ECo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="3Kb-WO-WPy"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="M3e-to-T93"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="TZi-Fi-Ik9"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="centerX" secondItem="imE-je-ECo" secondAttribute="centerX" constant="-0.5" id="VaU-Ky-jmp"/>
+                            <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="imE-je-ECo" secondAttribute="bottom" constant="20" id="bTf-O0-hpF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cI5-oL-5AB" secondAttribute="trailing" constant="-16" id="cUv-MB-SHH"/>
                             <constraint firstItem="cI5-oL-5AB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cpB-Rj-3UG"/>
                             <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="K0p-Hq-ChN" secondAttribute="bottom" id="eMX-LX-dv7"/>
