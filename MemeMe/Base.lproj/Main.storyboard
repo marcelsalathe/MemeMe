@@ -38,14 +38,22 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="RAe-6h-D0r"/>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVM-xY-YVU">
+                                <rect key="frame" x="252" y="73" width="97" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="RVM-xY-YVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="Hl0-8o-Cq4"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="M3e-to-T93"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="TZi-Fi-Ik9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cI5-oL-5AB" secondAttribute="trailing" constant="-16" id="cUv-MB-SHH"/>
                             <constraint firstItem="cI5-oL-5AB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cpB-Rj-3UG"/>
                             <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="K0p-Hq-ChN" secondAttribute="bottom" id="eMX-LX-dv7"/>
+                            <constraint firstItem="RVM-xY-YVU" firstAttribute="centerX" secondItem="K0p-Hq-ChN" secondAttribute="centerX" constant="0.5" id="l82-mb-9Go"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K0p-Hq-ChN" secondAttribute="trailing" constant="-16" id="nEh-gU-MNw"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cI5-oL-5AB" secondAttribute="bottom" id="pF7-8e-VJ4"/>
                         </constraints>
@@ -53,6 +61,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="D8l-uh-zC6" id="Wu1-6x-OCF"/>
                         <outlet property="pickedImageView" destination="K0p-Hq-ChN" id="Y40-nv-anw"/>
+                        <outlet property="topTextField" destination="RVM-xY-YVU" id="n6d-W3-HD1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
