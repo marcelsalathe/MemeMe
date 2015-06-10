@@ -17,67 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG3-IA-gYi">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-Hq-ChN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cI5-oL-5AB">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="camera" id="M6P-gs-ieb">
+                                    <barButtonItem title="Album" id="D8l-uh-zC6">
                                         <connections>
-                                            <action selector="pickImage:" destination="vXZ-lx-hvc" id="HAf-5a-4Dp"/>
+                                            <action selector="pickImage:" destination="vXZ-lx-hvc" id="Vn5-kc-SQs"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E7T-r6-tbr">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YG3-IA-gYi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="AO1-Sx-GMn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YG3-IA-gYi" secondAttribute="trailing" constant="-16" id="ATn-Js-nc9"/>
-                            <constraint firstItem="E7T-r6-tbr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="VDU-Sl-sci"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="E7T-r6-tbr" secondAttribute="trailing" constant="-16" id="Yux-un-hf5"/>
-                            <constraint firstItem="YG3-IA-gYi" firstAttribute="top" secondItem="E7T-r6-tbr" secondAttribute="bottom" id="u5q-m3-mDt"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YG3-IA-gYi" secondAttribute="bottom" id="u68-Q5-lql"/>
-                            <constraint firstItem="E7T-r6-tbr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="yF8-C6-3TJ"/>
+                            <constraint firstItem="K0p-Hq-ChN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="M3e-to-T93"/>
+                            <constraint firstItem="K0p-Hq-ChN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="TZi-Fi-Ik9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cI5-oL-5AB" secondAttribute="trailing" constant="-16" id="cUv-MB-SHH"/>
+                            <constraint firstItem="cI5-oL-5AB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cpB-Rj-3UG"/>
+                            <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="K0p-Hq-ChN" secondAttribute="bottom" id="eMX-LX-dv7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K0p-Hq-ChN" secondAttribute="trailing" constant="-16" id="nEh-gU-MNw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cI5-oL-5AB" secondAttribute="bottom" id="pF7-8e-VJ4"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="YG3-IA-gYi"/>
-                                <exclude reference="E7T-r6-tbr"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="VDU-Sl-sci"/>
-                                <exclude reference="Yux-un-hf5"/>
-                                <exclude reference="yF8-C6-3TJ"/>
-                                <exclude reference="AO1-Sx-GMn"/>
-                                <exclude reference="ATn-Js-nc9"/>
-                                <exclude reference="u5q-m3-mDt"/>
-                                <exclude reference="u68-Q5-lql"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="YG3-IA-gYi"/>
-                                <include reference="E7T-r6-tbr"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="VDU-Sl-sci"/>
-                                <include reference="Yux-un-hf5"/>
-                                <include reference="yF8-C6-3TJ"/>
-                                <include reference="AO1-Sx-GMn"/>
-                                <include reference="ATn-Js-nc9"/>
-                                <include reference="u5q-m3-mDt"/>
-                                <include reference="u68-Q5-lql"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="pickedImageView" destination="E7T-r6-tbr" id="c6U-Fu-3oh"/>
+                        <outlet property="pickedImageView" destination="K0p-Hq-ChN" id="Y40-nv-anw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="883" y="639"/>
         </scene>
     </scenes>
 </document>
