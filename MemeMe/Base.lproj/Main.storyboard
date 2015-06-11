@@ -51,14 +51,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stN-1t-uNx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="XuK-B5-c1X">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="6ru-sC-2TF"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Z4u-Cg-1FI"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RVM-xY-YVU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="0MM-KI-0ge"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RVM-xY-YVU" secondAttribute="trailing" constant="-16" id="0oy-Ie-RV0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="imE-je-ECo" secondAttribute="trailing" constant="-16" id="18a-xB-7d3"/>
-                            <constraint firstItem="RVM-xY-YVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="1fm-5s-DaE"/>
+                            <constraint firstItem="RVM-xY-YVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="1fm-5s-DaE"/>
+                            <constraint firstItem="stN-1t-uNx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="2Ig-tG-1IO"/>
                             <constraint firstItem="imE-je-ECo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="3Kb-WO-WPy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="stN-1t-uNx" secondAttribute="trailing" constant="-16" id="Eug-ld-pRy"/>
+                            <constraint firstItem="stN-1t-uNx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="HqK-EO-4F9"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="M3e-to-T93"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="TZi-Fi-Ik9"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="centerX" secondItem="imE-je-ECo" secondAttribute="centerX" constant="-0.5" id="VaU-Ky-jmp"/>

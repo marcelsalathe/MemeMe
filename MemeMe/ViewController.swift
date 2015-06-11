@@ -60,6 +60,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.unsubscribeFromKeyboardNotifications()
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     
     
     
