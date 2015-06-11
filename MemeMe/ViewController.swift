@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var bottomTextField: UITextField!
     
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
     let memeTextAttributes = [
         NSForegroundColorAttributeName : UIColor.whiteColor(),
         NSStrokeColorAttributeName : UIColor.blackColor(),
@@ -40,6 +42,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.text = "BOTTOM"
         bottomTextField.textAlignment = NSTextAlignment.Center;
+        // share button
+        if (pickedImageView.image == nil) {
+            shareButton.enabled = false
+        }
     }
     
     
@@ -121,6 +127,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.pickedImageView.image = image
+            shareButton.enabled = true
         }
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -150,6 +157,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         newText = newText.stringByReplacingCharactersInRange(range, withString: string.uppercaseString)
         textField.text = String(newText)
         return false
+    }
+    
+    
+    
+    
+    
+    ///////////////////////////////////////////////////
+    // MEME HANDLING
+    ///////////////////////////////////////////////////
+    
+    // TODO call these when image is being shared
+    // TODO only allow sharing when image has been selected
+    func save() {
+        //Create the meme
+        var meme = Meme(topText:topTextField.text, bottomText:bottomTextField.text, image:pickedImageView.image!, memedImage:generateMemedImage())
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        // TODO: Hide toolbar and navbar
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        self.view.drawViewHierarchyInRect(self.view.frame,
+            afterScreenUpdates: true)
+        let memedImage : UIImage =
+        UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // TODO:  Show toolbar and navbar
+        
+        return memedImage
     }
     
     

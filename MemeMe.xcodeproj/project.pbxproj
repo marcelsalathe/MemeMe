@@ -13,6 +13,7 @@
 		1FC50F851B27575A002CC1A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC50F841B27575A002CC1A7 /* Images.xcassets */; };
 		1FC50F881B27575A002CC1A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC50F861B27575A002CC1A7 /* LaunchScreen.xib */; };
 		1FC50F941B27575A002CC1A7 /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50F931B27575A002CC1A7 /* MemeMeTests.swift */; };
+		1FC50FCC1B29C27F002CC1A7 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50FCB1B29C27F002CC1A7 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1FC50F8D1B27575A002CC1A7 /* MemeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC50F921B27575A002CC1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC50F931B27575A002CC1A7 /* MemeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeTests.swift; sourceTree = "<group>"; };
+		1FC50FCB1B29C27F002CC1A7 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				1FC50F841B27575A002CC1A7 /* Images.xcassets */,
 				1FC50F861B27575A002CC1A7 /* LaunchScreen.xib */,
 				1FC50F7B1B27575A002CC1A7 /* Supporting Files */,
+				1FC50FCB1B29C27F002CC1A7 /* Meme.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC50FCC1B29C27F002CC1A7 /* Meme.swift in Sources */,
 				1FC50F801B27575A002CC1A7 /* ViewController.swift in Sources */,
 				1FC50F7E1B27575A002CC1A7 /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				1FC50F991B27575A002CC1A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FC50F9A1B27575A002CC1A7 /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				1FC50F9C1B27575A002CC1A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
