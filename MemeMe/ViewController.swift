@@ -12,6 +12,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var pickedImageView: UIImageView!
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     @IBOutlet weak var topTextField: UITextField!
@@ -19,6 +23,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomTextField: UITextField!
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    
     
     let memeTextAttributes = [
         NSForegroundColorAttributeName : UIColor.whiteColor(),
@@ -164,19 +170,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     ///////////////////////////////////////////////////
-    // MEME HANDLING
+    // MEME SHARING
     ///////////////////////////////////////////////////
     
-    // TODO call these when image is being shared
-    // TODO only allow sharing when image has been selected
-    func save() {
+    
+    
+    @IBAction func shareMeme(sender: AnyObject) {
+        var memedImage = generateMemedImage()
+        let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: saveMeme)
+    }
+    
+    
+    func saveMeme() {
         //Create the meme
         var meme = Meme(topText:topTextField.text, bottomText:bottomTextField.text, image:pickedImageView.image!, memedImage:generateMemedImage())
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        println(appDelegate.memes.count)
+        // TODO dismiss meme editor and go back to sent memes
     }
     
     func generateMemedImage() -> UIImage {
         
-        // TODO: Hide toolbar and navbar
+        // Hide toolbar and navbar
+        toolBar.hidden = true
+        navigationBar.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -186,7 +207,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO:  Show toolbar and navbar
+        // Show toolbar and navbar
+        toolBar.hidden = false
+        navigationBar.hidden = false
         
         return memedImage
     }

@@ -55,7 +55,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem id="XuK-B5-c1X">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="6ru-sC-2TF"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="6ru-sC-2TF">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="vXZ-lx-hvc" id="hJo-xO-x97"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Z4u-Cg-1FI"/>
                                     </navigationItem>
                                 </items>
@@ -66,7 +70,7 @@
                             <constraint firstItem="RVM-xY-YVU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="0MM-KI-0ge"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RVM-xY-YVU" secondAttribute="trailing" constant="-16" id="0oy-Ie-RV0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="imE-je-ECo" secondAttribute="trailing" constant="-16" id="18a-xB-7d3"/>
-                            <constraint firstItem="RVM-xY-YVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="1fm-5s-DaE"/>
+                            <constraint firstItem="RVM-xY-YVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="54" id="1fm-5s-DaE"/>
                             <constraint firstItem="stN-1t-uNx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="2Ig-tG-1IO"/>
                             <constraint firstItem="imE-je-ECo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="3Kb-WO-WPy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="stN-1t-uNx" secondAttribute="trailing" constant="-16" id="Eug-ld-pRy"/>
@@ -74,7 +78,7 @@
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="M3e-to-T93"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="TZi-Fi-Ik9"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="centerX" secondItem="imE-je-ECo" secondAttribute="centerX" constant="-0.5" id="VaU-Ky-jmp"/>
-                            <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="imE-je-ECo" secondAttribute="bottom" constant="20" id="bTf-O0-hpF"/>
+                            <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="imE-je-ECo" secondAttribute="bottom" constant="10" id="bTf-O0-hpF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cI5-oL-5AB" secondAttribute="trailing" constant="-16" id="cUv-MB-SHH"/>
                             <constraint firstItem="cI5-oL-5AB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cpB-Rj-3UG"/>
                             <constraint firstItem="cI5-oL-5AB" firstAttribute="top" secondItem="K0p-Hq-ChN" secondAttribute="bottom" id="eMX-LX-dv7"/>
@@ -86,8 +90,10 @@
                     <connections>
                         <outlet property="bottomTextField" destination="imE-je-ECo" id="wxr-3X-Z1g"/>
                         <outlet property="cameraButton" destination="D8l-uh-zC6" id="Wu1-6x-OCF"/>
+                        <outlet property="navigationBar" destination="stN-1t-uNx" id="Km5-Em-wEm"/>
                         <outlet property="pickedImageView" destination="K0p-Hq-ChN" id="Y40-nv-anw"/>
                         <outlet property="shareButton" destination="6ru-sC-2TF" id="bWP-Y1-tFE"/>
+                        <outlet property="toolBar" destination="cI5-oL-5AB" id="pET-RH-5Yr"/>
                         <outlet property="topTextField" destination="RVM-xY-YVU" id="n6d-W3-HD1"/>
                     </connections>
                 </viewController>
