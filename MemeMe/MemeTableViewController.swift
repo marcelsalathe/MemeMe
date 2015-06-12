@@ -16,7 +16,7 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = ""
+        self.title = "Sent Memes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "presentMemeEditor")
     }
     
@@ -36,10 +36,16 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MemeCell") as! UITableViewCell
-        cell.imageView?.image = memes[indexPath.row].memedImage
-        cell.textLabel?.text = "bla"
+        let customImageView = cell.viewWithTag(1) as! UIImageView
+        let customTopLabel = cell.viewWithTag(2) as! UILabel
+        let customBottomLabel = cell.viewWithTag(3) as! UILabel
+        customImageView.image = memes[indexPath.row].memedImage
+        customTopLabel.text =  memes[indexPath.row].topText
+        customBottomLabel.text =  memes[indexPath.row].bottomText
         return cell
     }
+    
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memes.count
