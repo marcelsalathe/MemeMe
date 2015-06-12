@@ -32,10 +32,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ttb-IV-Xv9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" textLabel="yl8-wE-v5A" style="IBUITableViewCellStyleDefault" id="ttb-IV-Xv9">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttb-IV-Xv9" id="Ujh-tc-ObE">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yl8-wE-v5A">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -153,6 +161,11 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cI5-oL-5AB" secondAttribute="bottom" id="pF7-8e-VJ4"/>
                             <constraint firstItem="K0p-Hq-ChN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="yGR-dG-K9D"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nEh-gU-MNw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="imE-je-ECo" id="wxr-3X-Z1g"/>
