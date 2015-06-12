@@ -25,7 +25,12 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         memes = appDelegate.memes
-        self.tableView.reloadData()
+        if (memes.count == 0) {
+            presentMemeEditor()
+        }
+        else {
+            self.tableView.reloadData()
+        }
     }
     
     func presentMemeEditor() {
