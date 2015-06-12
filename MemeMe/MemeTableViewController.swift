@@ -29,14 +29,14 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
             presentMemeEditor()
         }
         else {
-            self.tableView.reloadData()
+            tableView.reloadData()
         }
     }
     
     func presentMemeEditor() {
         var memeEditorController:ViewController
         memeEditorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! ViewController
-        self.presentViewController(memeEditorController, animated: true, completion: nil)
+        presentViewController(memeEditorController, animated: true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -53,13 +53,13 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.memes.count
+        return memes.count
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let memeDetailViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        let memeDetailViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         memeDetailViewController.memedImage = memes[indexPath.row].memedImage
-        self.navigationController!.pushViewController(memeDetailViewController, animated: true)
+        navigationController!.pushViewController(memeDetailViewController, animated: true)
         
     }
     

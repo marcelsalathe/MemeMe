@@ -31,8 +31,8 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDelegate, 
     
     func presentMemeEditor() {
         var memeEditorController:ViewController
-        memeEditorController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! ViewController
-        self.presentViewController(memeEditorController, animated: true, completion: nil)
+        memeEditorController = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! ViewController
+        presentViewController(memeEditorController, animated: true, completion: nil)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,9 +47,9 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let memeDetailViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        let memeDetailViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         memeDetailViewController.memedImage = memes[indexPath.row].memedImage
-        self.navigationController!.pushViewController(memeDetailViewController, animated: true)
+        navigationController!.pushViewController(memeDetailViewController, animated: true)
     }
     
 
