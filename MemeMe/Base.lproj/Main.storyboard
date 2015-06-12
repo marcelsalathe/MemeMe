@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" rowHeight="120" id="ttb-IV-Xv9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" rowHeight="121" id="ttb-IV-Xv9">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttb-IV-Xv9" id="Ujh-tc-ObE">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -201,6 +201,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="883" y="639"/>
+        </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="xvG-QI-wcb">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" id="qxA-RQ-8kv" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CgY-pz-R8x"/>
+                        <viewControllerLayoutGuide type="bottom" id="rz5-nE-wxY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gea-uC-5om">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4f-WK-8BE">
+                                <rect key="frame" x="121" y="121" width="358" height="358"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rz5-nE-wxY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="G4f-WK-8BE" secondAttribute="bottom" constant="40" id="16K-gJ-y9C"/>
+                            <constraint firstItem="G4f-WK-8BE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CgY-pz-R8x" secondAttribute="bottom" constant="40" id="FrY-aP-d9Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G4f-WK-8BE" secondAttribute="trailing" id="clu-3I-kU9"/>
+                            <constraint firstItem="G4f-WK-8BE" firstAttribute="leading" secondItem="Gea-uC-5om" secondAttribute="leadingMargin" id="h5v-Qa-2XC"/>
+                            <constraint firstAttribute="centerX" secondItem="G4f-WK-8BE" secondAttribute="centerX" id="vN9-Gm-Gyo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="memedImageView" destination="G4f-WK-8BE" id="N0W-LS-Bfy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeU-hJ-hGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752" y="-148"/>
         </scene>
     </scenes>
 </document>
