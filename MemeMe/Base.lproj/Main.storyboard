@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="1016" y="-148"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="eu8-EE-AFc">
             <objects>
                 <navigationController id="JKf-vI-e5Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uk4-P7-lS3"/>
+                    <tabBarItem key="tabBarItem" title="" image="collection_item" id="uk4-P7-lS3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4DV-Qi-fhq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,4 +236,7 @@
             <point key="canvasLocation" x="1752" y="-148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection_item" width="30" height="30"/>
+    </resources>
 </document>
