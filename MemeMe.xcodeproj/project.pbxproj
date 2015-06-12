@@ -93,11 +93,11 @@
 				1FC50FCF1B2B1A21002CC1A7 /* MemeTableViewController.swift */,
 				1FFF8F591B2B640B00AE478D /* MemeCollectionViewController.swift */,
 				1FC50FD11B2B5424002CC1A7 /* MemeDetailViewController.swift */,
+				1FFF8F5B1B2B68B700AE478D /* CustomMemeCell.swift */,
 				1FC50F811B27575A002CC1A7 /* Main.storyboard */,
 				1FC50F841B27575A002CC1A7 /* Images.xcassets */,
 				1FC50F861B27575A002CC1A7 /* LaunchScreen.xib */,
 				1FC50F7B1B27575A002CC1A7 /* Supporting Files */,
-				1FFF8F5B1B2B68B700AE478D /* CustomMemeCell.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";

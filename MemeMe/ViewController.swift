@@ -196,7 +196,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
-        println(appDelegate.memes.count)
     }
     
     func generateMemedImage() -> UIImage {
