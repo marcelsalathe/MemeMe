@@ -77,6 +77,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
+    @IBAction func dismissViewController(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     ///////////////////////////////////////////////////
@@ -173,14 +176,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MEME SHARING
     ///////////////////////////////////////////////////
     
-    
-    
     @IBAction func shareMeme(sender: AnyObject) {
         var memedImage = generateMemedImage()
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        // setting up dismissal of the activity view once the meme is successfully shared:
+        activityViewController.completionWithItemsHandler = {
+            (activity, success, items, error) in
+            if (success) {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
         self.presentViewController(activityViewController, animated: true, completion: saveMeme)
     }
-    
     
     func saveMeme() {
         //Create the meme
@@ -190,7 +197,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
         println(appDelegate.memes.count)
-        // TODO dismiss meme editor and go back to sent memes
     }
     
     func generateMemedImage() -> UIImage {

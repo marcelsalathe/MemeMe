@@ -14,6 +14,7 @@
 		1FC50F881B27575A002CC1A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC50F861B27575A002CC1A7 /* LaunchScreen.xib */; };
 		1FC50F941B27575A002CC1A7 /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50F931B27575A002CC1A7 /* MemeMeTests.swift */; };
 		1FC50FCC1B29C27F002CC1A7 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50FCB1B29C27F002CC1A7 /* Meme.swift */; };
+		1FC50FD01B2B1A21002CC1A7 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50FCF1B2B1A21002CC1A7 /* MemeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1FC50F921B27575A002CC1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC50F931B27575A002CC1A7 /* MemeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeTests.swift; sourceTree = "<group>"; };
 		1FC50FCB1B29C27F002CC1A7 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		1FC50FCF1B2B1A21002CC1A7 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +83,12 @@
 			children = (
 				1FC50F7D1B27575A002CC1A7 /* AppDelegate.swift */,
 				1FC50F7F1B27575A002CC1A7 /* ViewController.swift */,
+				1FC50FCB1B29C27F002CC1A7 /* Meme.swift */,
+				1FC50FCF1B2B1A21002CC1A7 /* MemeTableViewController.swift */,
 				1FC50F811B27575A002CC1A7 /* Main.storyboard */,
 				1FC50F841B27575A002CC1A7 /* Images.xcassets */,
 				1FC50F861B27575A002CC1A7 /* LaunchScreen.xib */,
 				1FC50F7B1B27575A002CC1A7 /* Supporting Files */,
-				1FC50FCB1B29C27F002CC1A7 /* Meme.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				1FC50FCC1B29C27F002CC1A7 /* Meme.swift in Sources */,
 				1FC50F801B27575A002CC1A7 /* ViewController.swift in Sources */,
+				1FC50FD01B2B1A21002CC1A7 /* MemeTableViewController.swift in Sources */,
 				1FC50F7E1B27575A002CC1A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
